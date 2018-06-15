@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block form %}
+
+<form action="/snacks">
+Snack name: <input type="text" name="name" autocomplete="off">
+Snack kind: <input type="text" name="kind">
+<button type="submit">Add Snack</button>
+</form>
+
+{% endblock %}
