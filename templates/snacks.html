@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block snacks %}
-
+<h1>Snack Collection</h1>
 <ul>
   {% for snack in snacks %}
     <li>{{ snack.name }}</li>
   {% endfor %}
 </ul>
-
+  <a href="{{ url_for("add_new_snack") }}">Add A New Snack</a>
 {% endblock %}

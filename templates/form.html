@@ -2,9 +2,13 @@
 
 {% block form %}
 
-<form action="/snacks">
-Snack name: <input type="text" name="name" autocomplete="off">
-Snack kind: <input type="text" name="kind">
+<form action="{{url_for('show_form')}}?_method=put" method="POST"> 
+
+Snack Name: <input type="text" name="name" autocomplete="off">
+Kind of Snack: <select name="kind">
+  <option value="sweet" name="kind">Sweet</option>
+  <option value="salty" name="kind">Salty</option>
+</select>
 <button type="submit">Add Snack</button>
 </form>
 
