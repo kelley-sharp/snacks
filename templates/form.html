@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block form %}
+{% block content %}
 
 <form action="{{url_for('show_form')}}?_method=put" method="POST"> 
 
@@ -11,5 +11,6 @@ Kind of Snack: <select name="kind">
 </select>
 <button type="submit">Add Snack</button>
 </form>
+
 
 {% endblock %}

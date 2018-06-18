@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{{url_for('update_snack', id=snack.id)}}?_method=PATCH" method="POST"> 
+<h2>Edit Snack</h2>
+Snack Name: <input type="text" name="name" autocomplete="off" value="{{snack.name}}">
+Kind of Snack: <select name="kind">
+  <option value="sweet" name="kind">Sweet</option>
+  <option value="salty" name="kind">Salty</option>
+</select>
+<button type="submit">Update</button>
+</form>
+<a href="{{ url_for('show_snack', id=snack.id)}}">Go Back</a>
+
+{% endblock %}
