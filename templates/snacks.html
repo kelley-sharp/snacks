@@ -4,8 +4,10 @@
 <h1>Snack Collection</h1>
 <ul>
   {% for snack in snacks %}
-    <li><a href="{{ url_for( "show_snack", id=snack.id) }}">{{ snack.name }}</a></li>
+    <li>
+      <a href="{{ url_for( "show_snack", id=snack.id) }}">{{ snack.name }}</a></li>
   {% endfor %}
 </ul>
   <a href="{{ url_for("add_new_snack") }}">Add A New Snack</a>
 {% endblock %}
+
